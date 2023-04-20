@@ -1,10 +1,10 @@
-const { createApp } = Vue 
+const { createApp } = Vue
 
 createApp ({
     data() {
         return {
             currentImage: 0,
-            StopInterval: null
+            StopInterval: null,
             slides: [
                 {
                     image: 'img/01.webp',
