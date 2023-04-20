@@ -32,9 +32,21 @@ createApp ({
     methods: {
         next(){
             console.log(`next`)
+
+            this.currentImage++
+
+            if( this.currentImage > this.slides.length - 1) {
+                this.currentImage = 0
+            }
         },
         prev(){
             console.log(`prev`)
+
+            this.currentImage--
+
+            if( this.currentImage < 0) {
+                this.currentImage = this.slides.length - 1
+            }
         }
     }
 }).mount(`#app`)
