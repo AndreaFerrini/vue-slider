@@ -19,21 +19,18 @@
                     <div class="text">
                         <h3>Spiderman</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
+                            Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
-                    <div class="thumb active">
-                        <img src="./assets/img/01.webp" alt="Spiderman" />
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="next"></div>
+                    <div v-for="(elem, index) in slides" :key="index" class="thumb" :class="currentImage == index ? `active` : ``">
+                        <img :src="`./assets/` + elem.image" :alt="elem.title" />
                     </div>
-                    <div class="thumb">
+                    <!-- <div class="thumb">
                         <img src="./assets/img/02.webp" alt="Ratchet & Clank" />
                     </div>
                     <div class="thumb">
@@ -44,7 +41,7 @@
                     </div>
                     <div class="thumb">
                         <img src="./assets/img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -54,7 +51,7 @@
     
 
     <!-- script vue 3 -->
-    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- script js -->
