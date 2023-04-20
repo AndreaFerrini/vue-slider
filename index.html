@@ -15,11 +15,11 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img src="./assets/img/01.webp" alt="Spiderman" />
+                    <img :src=" `./assets/` +slides[currentImage].image" alt="Spiderman" />
                     <div class="text">
-                        <h3>Spiderman</h3>
+                        <h3>{{ slides[currentImage].title }}</h3>
                         <p>
-                            Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.
+                            {{ slides[currentImage].text }}
                         </p>
                     </div>
                 </div>
